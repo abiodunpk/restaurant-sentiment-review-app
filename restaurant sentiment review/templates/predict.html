@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Predict | Reviews</title>
+</head>
+
+<body>
+	<fieldset><h2>RESULTS<h2></fieldset>
+		<h2>{{comment}}</h2>
+	{% if prediction==1 %}	
+	<h1 style="color:blue">YOU ENTERED A GOOD REVIEW</h1>
+	<span> You can click <a href="{{url_for('home')}}">here</a> to make another review</span>
+
+	{% elif prediction==0 %}
+	<h1 style="color: red">YOU ENTERED BAD REVIEW </h1> 
+	<span> You can click <a href="{{url_for('home')}}">here</a> to make another review</span>
+
+
+	{% else %}
+	<h3 style="color: green"> PLEASE ENTER YOUR REVIEW<a href={{url_for('home')}}>HERE</a></h3>
+	{% endif %}
+
+
+
+
+</body>
+</html>
